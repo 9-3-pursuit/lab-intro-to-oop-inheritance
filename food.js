@@ -1,3 +1,4 @@
+
 // Create class below
 class Food {
   constructor(name, daysToSpoil = 1, fresh = true) {
@@ -23,6 +24,51 @@ class Food {
   }
 }
 
+const donut = [
+  {
+    name: "Sprinkle Spray",
+    hitPoints: 3,
+  },
+  {
+    name: "Icing Deluge",
+    hitPoints: 4,
+  },
+  {
+    name: "Sugar Shock",
+    hitPoints: 5,
+  },
+];
+const pizza = [
+  {
+    name: "Mouth Burn",
+    hitPoints: 3,
+  },
+  {
+    name: "Hot Pepper Storm",
+    hitPoints: 4,
+  },
+  {
+    name: "Cheese Grease",
+    hitPoints: 5,
+  },
+];
+
+console.log(donut)
+console.log(pizza)
+
+class BadFood extends Food {
+  constructor(name, daysToSpoil, fresh = true, weapons) {
+    super(name, daysToSpoil, fresh);
+    this.weapons = weapons;
+  }
+  isFeresh() {
+      console.log(`test msg`)
+  }
+  prepare() {}
+  fight() {}
+}
+
+let cheese = new BadFood ("cheese",567)
 
 // added the features/details of your methods here when adding a instantiate
 let sushi = new Food("sushi", 6, false);
