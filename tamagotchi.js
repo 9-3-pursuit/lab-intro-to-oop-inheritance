@@ -86,6 +86,9 @@ class Tamagotchi {
 
 let cutie = new Tamagotchi("cutie", 3, 4, 2, true, false);
 let silly = new Tamagotchi("silly", 8, 10, 9, false, true);
+let grumpy = new Tamagotchi("grumpy",0,0,0, true, true)
+
+// * All logs --v
 
 // based off energy, sick & mood/full levels
 cutie.eat();
@@ -94,7 +97,11 @@ cutie.timePasses();
 silly.eat();
 silly.sleep();
 silly.timePasses();
+grumpy.eat();
+grumpy.sleep();
+grumpy.timePasses();
 
+// cutie --v
 cutie.greet(); // Hello, I'm cutie !
 cutie.status(); // --v
 // My mood is: 2;
@@ -105,16 +112,28 @@ cutie.medicate();
 cutie.play(); // I am too tired to play
 cutie.badGuardian(); //The tamagotchi has been rehomed.
 
+// silly --v
 silly.greet(); // Hello, I'm silly !
 silly.status(); // --v
 // My mood is: 6
 // I am this full: 9
 // My energy is: 9
 // I am not sick
-
 silly.medicate();
 silly.play();
 silly.badGuardian();
+
+// grumpy --v
+grumpy.greet(); // Hello, I'm grumpy !
+grumpy.status(); // --v
+// My mood is: 0
+// I am this full: 0
+// My energy is: 0
+// I am not sick
+grumpy.medicate();
+grumpy.play();
+grumpy.badGuardian()
+
 
 // Do not edit below this line
 module.exports = Tamagotchi;
