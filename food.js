@@ -53,26 +53,29 @@ const pizza = [
   },
 ];
 
-console.log(donut)
-console.log(pizza)
+// console.log(donut)
+// console.log(pizza)
+
+// Bonus Attempt --v
 
 class BadFood extends Food {
   constructor(name, daysToSpoil, fresh = true, weapons) {
     super(name, daysToSpoil, fresh);
     this.weapons = weapons;
   }
-  isFeresh() {
-      console.log(`test msg`)
+ isFresh(){}
+  prepare() {
+    console.log(` I am ${this.name ? `and my calories are too high to count!` : `and you are just a passing trend!`}`)
   }
-  prepare() {}
   fight() {}
 }
 
-let cheese = new BadFood ("cheese",567)
 
 // added the features/details of your methods here when adding a instantiate
 let sushi = new Food("sushi", 6, false);
 let yogurt = new Food("yogurt", 15, true);
+
+
 
 sushi.prepare(); // sushi is being prepared
 sushi.isFresh(); // There are 6 days left before sushi spoils
