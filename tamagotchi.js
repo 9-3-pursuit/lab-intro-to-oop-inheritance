@@ -36,15 +36,14 @@ class Tamagotchi {
       this.energy -= 3;
       this.sick = false;
     } else {
-      console.log(`${this.name} needs no medicine because they are well.`);
+      console.log(`refusal to take medicine`);
       this.energy -= 1;
     }
   }
   play() {
-    if (this.sick) {
+    if (!this.sick) {
       this.mood -= 1;
       this.energy -= 1;
-      console.log(`Not feeling well, can't play`);
     } else {
       if (this.mood > 9) {
         this, (energy -= 2);
@@ -55,27 +54,60 @@ class Tamagotchi {
       }
     }
   }
-  sleep() {}
-  timePasses() {}
-  badGuardian() {}
+  sleep() {
+    this.energy += 4;
+    this.full -= 3;
+  }
+  timePasses() {
+    if (!this.sick) {
+      this.mood -= 2;
+      this.fullness -= 1;
+      this.energy -= 1;
+    } else {
+      this.mood -= 3;
+      this.fullness -= 2;
+      this.energy -= 2;
+    }
+  }
+  badGuardian() {
+    if (this.energy || this.mood || this.full <= 0) {
+      this.rehomed = true;
+      console.log(` The tamagotchi has been rehomed.`);
+    }
+  }
 }
 
 let cutie = new Tamagotchi("cutie", 3, 6, 2, true, false);
+let silly = new Tamagotchi("silly", 8, 10, 9, false, true);
 
-cutie.greet() // Hello, I'm cutie !
+cutie.greet(); // Hello, I'm cutie !
 
-cutie.status() // --v
- // My mood is: 2;
- // I am this full: 6;
- // My energy is: 3;
- // I am not sick
+cutie.status(); // --v
+// My mood is: 2;
+// I am this full: 6;
+// My energy is: 3;
+// I am not sick
 
-// cutie.eat() // based off energy, sick & full levels
- cutie.medicate()
-cutie.play() // I am too tired to play
-// cutie.sleep()
-// cutie.timePasses()
-// cutie.badGuardian()
+cutie.eat(); // based off energy, sick & full levels
+cutie.medicate();
+cutie.play(); // I am too tired to play
+cutie.sleep();
+cutie.timePasses();
+cutie.badGuardian(); //The tamagotchi has been rehomed.
+
+silly.greet() // Hello, I'm silly !
+silly.status()
+// My mood is: 9
+
+// I am this full: 10
+// My energy is: 8
+// I am sick
+silly.eat()
+silly.medicate()
+silly.play()
+silly.sleep()
+silly.timePasses()
+silly.badGuardian() //  The tamagotchi has been rehomed.
 
 // Do not edit below this line
 module.exports = Tamagotchi;
