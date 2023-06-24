@@ -21,7 +21,7 @@ class Tamagotchi {
   status() {
     console.log(
       "Status is:\n",
-      `My mood is: ${this.mood}\nI am this full: ${this.full}\nMy energy is: ${
+      `My mood is: ${this.mood}\nI am this full: ${this.full}\nMy energy is:${
         this.energy
       }\n${this.sick ? `I am not sick` : `I am sick`}`
     );
@@ -86,7 +86,7 @@ class Tamagotchi {
 
 let cutie = new Tamagotchi("cutie", 3, 4, 2, true, false);
 let silly = new Tamagotchi("silly", 8, 10, 9, false, true);
-let grumpy = new Tamagotchi("grumpy",0,0,0, true, true)
+let grumpy = new Tamagotchi("grumpy", 0, 0, 0, true, true);
 
 // * All logs --v
 
@@ -132,8 +132,7 @@ grumpy.status(); // --v
 // I am not sick
 grumpy.medicate();
 grumpy.play();
-grumpy.badGuardian()
-
+grumpy.badGuardian();
 
 // Do not edit below this line
 module.exports = Tamagotchi;
