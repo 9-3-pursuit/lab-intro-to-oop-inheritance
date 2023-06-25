@@ -34,7 +34,7 @@ class Tamagotchi {
     this.full += 2;
     this.energy -= 1;
 
-    if (this.full >= 10) {
+    if (this.full > 10) {
       this.sick = true;
     }
   }
@@ -44,6 +44,25 @@ class Tamagotchi {
       this.energy -= 3;
     } else {
       console.log("refusal to take medicine");
+      this.energy--;
+    }
+  }
+
+  play() {
+    if (!sick) {
+      this.mood += 2;
+      this.energy -= 1;
+      this.full -= 1;
+    } else {
+      this.mood--;
+      this.energy--;
+    }
+    if (this.mood > 9) {
+      this.energy -= 2;
+      this.full--;
+    }
+    if (this.energy <= 3) {
+      console.log("I am too tired to play");
       this.energy--;
     }
   }
