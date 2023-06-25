@@ -6,21 +6,28 @@ class Food {
     this.daysToSpoil = daysToSpoil;
     this.fresh = fresh;
   }
-  prepare(name) {
-    console.log(`food ${name} is being prepared`);
+  prepare() {
+    console.log(`${this.name} is being prepared`);
   }
-  isFresh(name, daysToSpoil, fresh) {
-    if (fresh) {
-      console.log(`There are ${daysToSpoil} days left before ${name} spoils.`);
+  isFresh() {
+    if (this.fresh && this.daysToSpoil > 0) {
+      console.log(
+        `There are ${this.daysToSpoil} days left before ${this.name} spoils.`
+      );
     } else {
-      console.log(`${name} has spoiled.`);
+      console.log(`${this.name} has spoiled.`);
     }
   }
-  aDayPasses(daysToSpoil){
-    isFresh(name, daysToSpoil, fresh){
-        
-    }
+  aDayPasses() {
+    this.daysToSpoil--;
+    this.isFresh();
   }
 }
+
+const iceCream = new Food("Ice Cream", 3, true);
+iceCream.prepare();
+iceCream.isFresh();
+iceCream.aDayPasses();
+
 // Do not edit below this line
 module.exports = Food;
