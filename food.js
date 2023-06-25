@@ -16,11 +16,10 @@ class Food {
       console.log(`${name} has spoiled.`);
     }
   }
-  classyGreeting(otherClassyBeing) {
-    console.log(`Howdy, there, ${otherClassyBeing.name}`);
-  }
-  ageUp() {
-    this.age++;
+  aDayPasses(daysToSpoil){
+    isFresh(name, daysToSpoil, fresh){
+        
+    }
   }
 }
 // Do not edit below this line
