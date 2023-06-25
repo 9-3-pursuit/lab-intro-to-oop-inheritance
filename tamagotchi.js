@@ -72,15 +72,11 @@ class Tamagotchi {
     }
   }
 
-  // if energy <= 3 he cannot play
-  //   if energy > 3 then he can play, mood will increase, he is not sick, his enetgy low, his full
-
-  //   - play: increases mood by 2, reduces energy and full by 1,
-  //   - will not play if tamagotchi is sick,
-  //   - if asked to play when sick, reduce mood and energy by 1
-  //   - will not play if mood is above 9, reduce energy by 2 and full by 1
-  //   - will not play if energy is less than or equal to 3
-  //     - console log "I am too tired to play" - reduce energy by 1
+  sleep() {
+    this.energy += 4;
+    this.full -= 3;
+  }
+  
 }
 
 // Do not edit below this line
