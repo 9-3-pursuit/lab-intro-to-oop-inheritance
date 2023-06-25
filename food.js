@@ -6,11 +6,15 @@ class Food {
     this.daysToSpoil = daysToSpoil;
     this.fresh = fresh;
   }
-  prepare() {
-    console.log(this.walkStyle);
+  prepare(name) {
+    console.log(`food ${name} is being prepared`);
   }
-  greet(otherBeing) {
-    console.log(`Sniff sniff, ${otherBeing}`);
+  isFresh(name, daysToSpoil, fresh) {
+    if (fresh) {
+      console.log(`There are ${daysToSpoil} days left before ${name} spoils.`);
+    } else {
+      console.log(`${name} has spoiled.`);
+    }
   }
   classyGreeting(otherClassyBeing) {
     console.log(`Howdy, there, ${otherClassyBeing.name}`);
