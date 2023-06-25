@@ -42,30 +42,45 @@ class Tamagotchi {
     if (this.sick) {
       this.full = 9;
       this.energy -= 3;
+      this.sick = false;
     } else {
-      console.log("refusal to take medicine");
       this.energy--;
+      console.log("refusal to take medicine");
     }
   }
 
   play() {
-    if (!sick) {
+    if (this.sick === false && this.energy > 3 && this.mood <= 9) {
       this.mood += 2;
-      this.energy -= 1;
-      this.full -= 1;
-    } else {
+      this.energy--;
+      this.full--;
+    }
+
+    if (this.sick) {
       this.mood--;
       this.energy--;
     }
+
     if (this.mood > 9) {
       this.energy -= 2;
       this.full--;
     }
+
     if (this.energy <= 3) {
-      console.log("I am too tired to play");
       this.energy--;
+      console.log("I am too tired to play");
     }
   }
+
+  // if energy <= 3 he cannot play
+  //   if energy > 3 then he can play, mood will increase, he is not sick, his enetgy low, his full
+
+  //   - play: increases mood by 2, reduces energy and full by 1,
+  //   - will not play if tamagotchi is sick,
+  //   - if asked to play when sick, reduce mood and energy by 1
+  //   - will not play if mood is above 9, reduce energy by 2 and full by 1
+  //   - will not play if energy is less than or equal to 3
+  //     - console log "I am too tired to play" - reduce energy by 1
 }
 
 // Do not edit below this line
