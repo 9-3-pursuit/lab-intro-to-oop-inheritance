@@ -10,10 +10,21 @@ class Tamagotchi {
 
     }
     greet() {
+        console.log(`Hello, I'm ${this.name}`)
     }
     status() {
+        { `My mood is: ${this.mood} /n I am this full: ${this.full} /n My energy is ${this.energy}` }
+        if (this.sick) {
+            console.log(`I am not sick`)
+        } else {
+            console.log(`I am not sick`)
+        }
     }
     eat() {
+        this.full = this.full + 2
+        this.energy = this.engery - 1
+
+
 
     }
     medicate() {
