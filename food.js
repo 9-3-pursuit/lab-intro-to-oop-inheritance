@@ -46,11 +46,11 @@ aDayPasses(){
 module.exports = Food;
 
 
-let x = new Food(`tacos`, 2)
+let tacos = new Food(`tacos`, 2)
 
 
-x.prepare()
-x.isFresh() 
-x.aDayPasses()
-x.aDayPasses()
+tacos.prepare()
+tacos.isFresh() 
+tacos.aDayPasses()
+tacos.aDayPasses()
 
