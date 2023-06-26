@@ -20,7 +20,7 @@
     "url": "https://github.com/joinpursuit/oop-fruits-pets-lab-solution/issues"
   },
   "homepage": "https://github.com/joinpursuit/oop-fruits-pets-lab-solution#readme",
-  "dependencies": {
-    "jest": "^27.5.1"
+  "devDependencies": {
+    "jest": "^29.5.0"
   }
 }
