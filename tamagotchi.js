@@ -88,7 +88,20 @@ class Tamagotchi {
 
 let josie = new Tamagotchi("Josie", 6, 4, 3, false, false);
 josie.greet();
+josie.play();
 josie.status();
-
+josie.eat();
+josie.eat();
+josie.eat();
+josie.eat();
+josie.play();
+josie.status();
+josie.medicate();
+josie.status();
+josie.sleep();
+josie.status();
+josie.timePasses();
+josie.status();
+josie.badGuardian();
 // Do not edit below this line
 module.exports = Tamagotchi;
