@@ -32,12 +32,12 @@ class Tamagotchi {
     this.full = this.full - 1;
     this.energy = this.energy - 1;
     if(this.sick === true) {
-       this.mood = 9,
-       this.energy = 5,
-       this.full = 8
+    //    this.mood = 9,
+    //    this.energy = 5,
+    //    this.full = 8
     }
     if(this.mood > 9) {
-        this.energy <= 3
+        // this.energy <= 3
     }
     if(this.energy <= 3) {
     
