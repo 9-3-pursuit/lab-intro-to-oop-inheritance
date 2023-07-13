@@ -23,5 +23,10 @@ class Food {
   }
 }
 
+const Burger = new Food("Burger", 2);
+Burger.perpare();
+Burger.isFresh();
+Burger.aDayPasses();
+
 // Do not edit below this line
 module.exports = Food;
