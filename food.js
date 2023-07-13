@@ -24,7 +24,7 @@ class Food {
 }
 
 const Burger = new Food("Burger", 2);
-Burger.perpare();
+Burger.prepare();
 Burger.isFresh();
 Burger.aDayPasses();
 
