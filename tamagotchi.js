@@ -43,22 +43,23 @@ class Tamagotchi {
   }
   play() {
     if (this.sick) {
-      this.mood -= 1;
-      this.energy -= 1;
-      console.log("Can play? :", `I am too sick to play`);
+      this.mood--;
+      this.energy--;
+      return;
     } else {
       if (this.mood > 9) {
         this.energy -= 2;
-        this.full -= 1;
+        this.full--;
         return;
       }
       if (this.energy <= 3) {
-        this.energy -= 1;
-        console.log("Can play? :", `I am too tired to play`);
+        console.log(`I am too tired to play`);
+        this.energy--;
+        return;
       }
       this.moood += 2;
-      this.energy -= 1;
-      this.full -= 1;
+      this.energy--;
+      this.full--;
     }
   }
   sleep() {
