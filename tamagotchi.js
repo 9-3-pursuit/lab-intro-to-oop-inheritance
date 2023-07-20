@@ -34,6 +34,7 @@ class Tamagotchi {
         if (this.sick) {
             this.full = 9;
             this.energy -= 3;
+            this.sick = false; // Ensure the Tamagotchi is healed
         } else {
             console.log('I do not need medicine!');
             this.energy -= 1;
@@ -41,7 +42,7 @@ class Tamagotchi {
     }
 
     play() {
-        if (this.sick || this.mood > 9 || this.energy <= 3) {
+        if (this.sick || this.mood >= 9 || this.energy <= 3) {
             console.log('I am too tired to play');
             this.energy -= 1;
         } else {
@@ -76,16 +77,4 @@ class Tamagotchi {
     }
 }
 
-// Test
-let pet = new Tamagotchi('Tammy');
-pet.greet();
-pet.status();
-pet.eat();
-pet.medicate();
-pet.play();
-pet.sleep();
-pet.timePasses();
-pet.badGuardian();
-
-// Do not edit below this line
 module.exports = Tamagotchi;
